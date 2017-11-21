@@ -1,0 +1,26 @@
+2017/11/21 19:04:37 
+  ______             __         ______               __
+ /      \           /  |       /      \             /  |
+/$$$$$$  |  ______  $$ |____  /$$$$$$  |  ______   _$$ |_
+$$ |  $$/  /      \ $$      \ $$ |  $$/  /      \ / $$   |
+$$ |      /$$$$$$  |$$$$$$$  |$$ |       $$$$$$  |$$$$$$/
+$$ |   __ $$ |  $$ |$$ |  $$ |$$ |   __  /    $$ |  $$ | __
+$$ \__/  |$$ \__$$ |$$ |__$$ |$$ \__/  |/$$$$$$$ |  $$ |/  |
+$$    $$/ $$    $$/ $$    $$/ $$    $$/ $$    $$ |  $$  $$/
+ $$$$$$/   $$$$$$/  $$$$$$$/   $$$$$$/   $$$$$$$/    $$$$/
+2017/11/21 19:04:37 Fancy app for fancy pep's!
+2017/11/21 19:04:37 Rendered cat-pic URL: http://thecatapi.com/api/images/get?size=mid&type=gif
+2017/11/21 19:04:37 Start serving on :80 ...
+2017/11/21 19:04:47 Got user connection: Go-http-client/1.1
+2017/11/21 19:05:03 Got user connection: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+2017/11/21 19:05:07 Got user connection: Go-http-client/1.1
+2017/11/21 19:05:27 Got user connection: Go-http-client/1.1
+2017/11/21 19:05:47 Got user connection: Go-http-client/1.1
+2017/11/21 19:06:07 Got user connection: Go-http-client/1.1
+2017/11/21 19:06:27 Got user connection: Go-http-client/1.1
+2017/11/21 19:06:47 Got user connection: Go-http-client/1.1
+2017/11/21 19:07:07 Got user connection: Go-http-client/1.1
+2017/11/21 19:07:27 Got user connection: Go-http-client/1.1
+2017/11/21 19:07:47 Got user connection: Go-http-client/1.1
+2017/11/21 19:08:07 Got user connection: Go-http-client/1.1
+2017/11/21 19:08:27 Got user connection: Go-http-client/1.1
