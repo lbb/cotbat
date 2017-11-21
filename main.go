@@ -78,12 +78,6 @@ func buildServeFunction(urlPath, imgType, imgSize string) http.HandlerFunc {
 }
 
 func setupLogging() {
-	logString := flag.Lookup(logFileKey).Value.String()
-	f, err := os.OpenFile(logString, os.O_CREATE|os.O_TRUNC|os.O_WRONLY, os.ModePerm)
-	if err != nil {
-		panic(err)
-	}
-	log.SetOutput(f)
 }
 
 func main() {
