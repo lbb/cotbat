@@ -1,4 +1,4 @@
 FROM alpine:latest
-ADD . /
+ADD main /
 WORKDIR /
 CMD ./main
