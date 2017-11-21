@@ -1,6 +1,6 @@
 OUT:=main
 DOCKER_NAME:=realfake/cotbat
-CC=docker run --rm -e GOOS=linux -e CGO_ENABLED=0 -v "$(PWD)":/usr/src/$(OUT) -w /usr/src/$(OUT) golang:1.9.2 go
+CC=docker run --rm -e GOOS=linux -e CGO_ENABLED=0 -v "$(PWD)":/usr/src/$(OUT):z -w /usr/src/$(OUT) golang:1.9.2 go
 GOBUILDFLAGS:=-i -v
 LDFLAGS:=-extldflags '-static'
 
