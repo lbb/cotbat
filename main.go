@@ -37,20 +37,6 @@ func shutDownOnSignals() {
 	os.Exit(0)
 }
 
-func printFancyMessageToLogBeansSingletonLoggerFacilityProviderBeans() {
-	log.Println(`
-  ______             __         ______               __
- /      \           /  |       /      \             /  |
-/$$$$$$  |  ______  $$ |____  /$$$$$$  |  ______   _$$ |_
-$$ |  $$/  /      \ $$      \ $$ |  $$/  /      \ / $$   |
-$$ |      /$$$$$$  |$$$$$$$  |$$ |       $$$$$$  |$$$$$$/
-$$ |   __ $$ |  $$ |$$ |  $$ |$$ |   __  /    $$ |  $$ | __
-$$ \__/  |$$ \__$$ |$$ |__$$ |$$ \__/  |/$$$$$$$ |  $$ |/  |
-$$    $$/ $$    $$/ $$    $$/ $$    $$/ $$    $$ |  $$  $$/
- $$$$$$/   $$$$$$/  $$$$$$$/   $$$$$$/   $$$$$$$/    $$$$/`)
-	log.Println("Fancy app for fancy pep's!")
-}
-
 func parseValuesFromConfig() (port, imgType, imgSize string) {
 	// Lookup port from os args
 	portString := flag.Lookup(portKey).Value.String()
@@ -107,7 +93,6 @@ func main() {
 	flag.Parse()
 
 	setupLogging()
-	printFancyMessageToLogBeansSingletonLoggerFacilityProviderBeans()
 
 	port, imgType, imgSize := parseValuesFromConfig()
 
