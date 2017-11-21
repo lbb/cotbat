@@ -53,7 +53,7 @@ func buildServeFunction(urlPath, imgType, imgSize string) http.HandlerFunc {
 	log.Printf("Rendered cat-pic URL: %s\n", fullUrlPath)
 	return func(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Got user connection: %s\n", r.Header.Get("User-Agent"))
-		http.Redirect(w, r, fullUrlPath, http.StatusPermanentRedirect)
+		http.Redirect(w, r, fullUrlPath, http.StatusTemporaryRedirect)
 	}
 }
 
