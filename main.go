@@ -1,20 +1,17 @@
 package main
 
 import (
-	"encoding/json"
 	"flag"
 	"log"
 	"net/http"
 	"net/url"
 	"os"
 	"os/signal"
-	"path/filepath"
 )
 
 const (
 	baseUrl    = "http://thecatapi.com"
 	getPath    = "/api/images/get"
-	configFile = "./config.json"
 )
 
 const (
@@ -40,24 +37,7 @@ func shutDownOnSignals() {
 func parseValuesFromConfig() (port, imgType, imgSize string) {
 	// Lookup port from os args
 	portString := flag.Lookup(portKey).Value.String()
-	absolutePath, err := filepath.Abs(configFile)
-	if err != nil {
-		log.Fatal(err)
-	}
-	f, err := os.Open(absolutePath)
-	if err != nil {
-		log.Fatal(err)
-	}
-	// Close file after function exit
-	defer f.Close()
-
-	var i map[string]string
-	// Parse file into i
-	err = json.NewDecoder(f).Decode(&i)
-	if err != nil {
-		log.Fatal(err)
-	}
-	return portString, i[imgTypeKey], i[imgSizeKey]
+	return portString, os.Getenv("COT_TYPE"), os.Getenv("COT_SIZE")
 }
 
 func buildServeFunction(urlPath, imgType, imgSize string) http.HandlerFunc {

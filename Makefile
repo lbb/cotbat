@@ -26,5 +26,4 @@ clean:
 
 .PHONY: run
 run: docker
-	docker run -it --rm --name cotbat -p 8080:80 -v `pwd`/log.log:/log.log $(DOCKER_NAME)
-
+	docker run -it --rm --name cotbat -p 8080:80 --env COT_TYPE=png --env COT_SIZE=mid $(DOCKER_NAME)
