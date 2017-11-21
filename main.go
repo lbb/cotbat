@@ -7,6 +7,7 @@ import (
 	"net/url"
 	"os"
 	"os/signal"
+	"syscall"
 )
 
 const (
@@ -29,8 +30,9 @@ const (
 
 func shutDownOnSignals() {
 	ch := make(chan os.Signal, 1)
-	signal.Notify(ch) //,syscall.SIGTERM, syscall.SIGKILL)
+	signal.Notify(ch, syscall.SIGTERM, syscall.SIGKILL, syscall.SIGINT)
 	<-ch
+	log.Println("Shutdown gracefully")
 	os.Exit(0)
 }
 
@@ -70,7 +72,7 @@ func main() {
 
 	port, imgType, imgSize := parseValuesFromConfig()
 
-	//go shutDownOnSignals()
+	go shutDownOnSignals()
 
 	sv := buildServeFunction(baseUrl+getPath, imgType, imgSize)
 	http.HandleFunc("/", sv)
